@@ -1,10 +1,12 @@
-delimiter $$
-CREATE PROCEDURE totalPeso1 ()
+DELIMITER $$
+CREATE PROCEDURE totalPeso ()
 BEGIN
-	SELECT SUM(peso) AS totalpeso 
+	SELECT SUM(peso) AS total
 		FROM Uva;
-END
-$$
+END $$
+
+DROP PROCEDURE totalPeso;
+CALL totalPeso();
 
 
 delimiter $$

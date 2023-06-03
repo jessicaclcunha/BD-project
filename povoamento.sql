@@ -20,11 +20,11 @@ INSERT INTO Uva
 	(id, cor, sabor, existeGrainha, acucar, acidez, peso)
 	VALUES 
 		(1, 'rosada', 'doce', 's', 0.8, 'pouco ácido', 237464.13),
-        (2, 'branco', 'cítrico', 's', '0.9', 'moderado', 23827),
-        (3, )
+        (2, 'branco', 'cítrico', 's', '0.9', 'moderado', 23827)
 	;
-    
--- DELETE FROM Uva;
+
+DELETE FROM Uva
+	WHERE id = 1 AND id = 2 AND id = 3;
 -- SELECT * FROM Uva;
 
 INSERT INTO Vinho
