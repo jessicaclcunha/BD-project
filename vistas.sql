@@ -1,7 +1,6 @@
 CREATE VIEW viewQuinta AS
-SELECT id, dimensao, Zona_codigoGEO, VINHO_id, Responsavel_nome, Uva_id
+SELECT id, dimensao, Zona_codigoGEO, Vinho_id, Responsavel_nome, Uva_id
 FROM Quinta;
-
 
 CREATE VIEW viewResponsaveis AS
  SELECT Responsavel.nome, Quinta.id

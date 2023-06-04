@@ -28,7 +28,7 @@ DROP PROCEDURE totalPesoUvasAno;
 CALL totalPesoUvasAno(2021);
 
 delimiter $$
-CREATE PROCEDURE obterVinhoPorRegiao (Regiao INT UNSIGNED)
+CREATE PROCEDURE obterVinhosPorRegiao (Regiao INT UNSIGNED)
 BEGIN
 	SELECT Vinho.*
 		FROM Quinta
