@@ -38,13 +38,13 @@ INSERT INTO Vinho
 -- SELECT * FROM Vinho;
 
 INSERT INTO Zona
-    (codigoGeo)
+    (codigoGeo, nome)
     VALUES
-        (1234567),
-        (3248967),
-        (8973462), 
-        (3984438),
-        (2746822),
+        (1234567, 'Douro'),
+        (3248967, 'Alentejo'),
+        (8973462, 'Minho'), 
+        (3984438, 'Douro'),
+        (2746822, 'Algarve'),
         (1289238),
         (5834792),
         (6239294),

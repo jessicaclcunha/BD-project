@@ -37,6 +37,7 @@ DROP TABLE Quinta;
 
 CREATE TABLE IF NOT EXISTS Zona (
   codigoGeo INT UNSIGNED NOT NULL,
+  nome VARCHAR(50) NOT NULL,
   PRIMARY KEY (codigoGeo));
 
 
