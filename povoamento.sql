@@ -45,11 +45,11 @@ INSERT INTO Zona
         (8973462, 'Minho'), 
         (3984438, 'Douro'),
         (2746822, 'Algarve'),
-        (1289238),
-        (5834792),
-        (6239294),
-        (9182382),
-        (4234567)
+        (1289238, 'Minho'),
+        (5834792, 'Terras da Beira'),
+        (6239294, 'Tejo'),
+        (9182382, 'Minho'),
+        (4234567, 'Minho')
     ;
     
 -- DELETE FROM Zona;
@@ -76,7 +76,8 @@ INSERT INTO Responsavel
 INSERT INTO Quinta
     (id, dimensao, Zona_codigoGeo, Vinho_id, Responsavel_nome, Uva_id)
     VALUES
-        (1, 234562.34, 1234567, 1, 'Duarte Maria Lima Fino', 1)
+        (1, 234562.34, 1234567, 1, 'Duarte Maria Lima Fino', 1),
+        (2, 2424, 1234567, 2, 'Duarte Maria Lima Fino', 2)
     ;
 
 -- DELETE FROM Quinta;
