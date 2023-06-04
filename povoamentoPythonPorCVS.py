@@ -7,7 +7,7 @@ def insert_into_table(cursor, table_name, values):
         'Uva': ['id', 'cor', 'sabor', 'existeGrainha', 'acucar', 'acidez', 'peso'],
         'Vinho': ['id' ,'acidez', 'pH', 'grau', 'aroma', 'sabor', 'recomendacoes', 'anoProducao', 'nome', 'teorAlcoolico', 'quantidade', 'preco', 'uva_id'],
         'Quinta': ['id', 'dimensao', 'Zona_codigoGeo', 'Vinho_id', 'Responsavel_nome', 'Uva_id'],
-        'Zona': ['codigoGeo'],
+        'Zona': ['codigoGeo', 'nome'],
         'Responsavel': ['nome'],
         'Telemovel': ['telemovel', 'responsavel'],
         'eMail': ['eMail', 'responsavel']
