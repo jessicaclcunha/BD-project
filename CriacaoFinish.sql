@@ -2,6 +2,18 @@ CREATE SCHEMA IF NOT EXISTS Vinha DEFAULT CHARACTER SET utf8 ;
 USE Vinha ;
 CREATE DATABASE Vinha;
 
+CREATE USER 'administrador'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON Vinha TO 'administrador'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'eng_informatico'@'localhost' IDENTIFIED BY '0000';
+GRANT SELECT, INSERT, UPDATE, DELETE, ALTER ON Vinha TO 'eng_informatico'@'localhost';
+GRANT CREATE, DROP, ALTER, INDEX ON Vinha TO 'eng_informatico'@'localhost';
+FLUSH PRIVILEGES;
+
+SELECT User, Host FROM mysql.user;
+
 CREATE TABLE IF NOT EXISTS Uva (
   id INT  UNSIGNED NOT NULL,
   cor VARCHAR(75) NOT NULL,
