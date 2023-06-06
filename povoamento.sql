@@ -9,6 +9,14 @@
 -- maio 2023
 -- ------------------------------------------------------
 -- ------------------------------------------------------
+DELETE FROM Quinta;
+DELETE FROM Vinho;
+DELETE FROM Uva;
+DELETE FROM Zona;
+DELETE FROM Telemovel;
+DELETE FROM eMail;	
+DELETE FROM Quinta;
+DELETE FROM Responsavel;
 
 USE Vinha ;
 
@@ -30,8 +38,8 @@ INSERT INTO Uva
         (10, 'branco', 'fruta madura', 'n', 1.1, 'moderado',63892.32)
 	;
 
--- DELETE FROM Uva;
--- SELECT * FROM Uva;
+DELETE FROM Uva;
+SELECT * FROM Uva;
 
 INSERT INTO Vinho
     (id, acidez, pH, grau, aroma, sabor, recomendacoes, anoProducao, nome, teorAlcoolico, quantidade, preco, Uva_id)
@@ -46,8 +54,8 @@ INSERT INTO Vinho
         (8, 'pouco acido', 3.6, 12.8, 'vegetal', 'doce', 'Ótima combinação com picanha', 2019, 'Carruades Lafite Rothschild Pauillac', 12.5, 348742, 594, 5)
    ;
     
--- DELETE FROM Vinho;
--- SELECT * FROM Vinho;
+DELETE FROM Vinho;
+SELECT * FROM Vinho;
 
 INSERT INTO Zona
     (codigoGeo, nome)
@@ -64,8 +72,8 @@ INSERT INTO Zona
         (4234567, 'Minho')
     ;
     
--- DELETE FROM Zona;
--- SELECT * FROM Zona;
+DELETE FROM Zona;
+SELECT * FROM Zona;
 
 INSERT INTO Responsavel
     (nome)
@@ -82,8 +90,8 @@ INSERT INTO Responsavel
         ('Vítor Araújo Pereira')
     ;
 
--- DELETE FROM Responsavel;
--- SELECT * FROM Responsavel;
+DELETE FROM Responsavel;
+SELECT * FROM Responsavel;
 
 INSERT INTO Quinta
     (id, dimensao, Zona_codigoGeo, Vinho_id, Responsavel_nome, Uva_id)
@@ -100,8 +108,8 @@ INSERT INTO Quinta
         (10, 8347.2, 2746822, 8, 'Margarida Lopes de Sousa' ,5)
     ;
 
--- DELETE FROM Quinta;
--- SELECT * FROM Quinta;
+DELETE FROM Quinta;
+SELECT * FROM Quinta;
 
 INSERT INTO Telemovel
     (telemovel, responsavel)
@@ -118,8 +126,8 @@ INSERT INTO Telemovel
         ('962919293', 'Vítor Araújo Pereira')
     ;
 
--- DELETE FROM Telemovel;
--- SELECT * FROM Telemovel;
+DELETE FROM Telemovel;
+SELECT * FROM Telemovel;
 
 INSERT INTO eMail
     (eMail, responsavel)
@@ -136,5 +144,5 @@ INSERT INTO eMail
         ('vap@gmail.com', 'Vítor Araújo Pereira')
     ;
     
--- DELETE FROM eMail;
--- SELECT * FROM eMail;
+DELETE FROM eMail;
+SELECT * FROM eMail;
