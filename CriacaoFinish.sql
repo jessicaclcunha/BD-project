@@ -1,15 +1,17 @@
 CREATE SCHEMA IF NOT EXISTS Vinha DEFAULT CHARACTER SET utf8 ;
-USE Vinha ;
 CREATE DATABASE Vinha;
+USE Vinha ;
 
-CREATE USER 'administrador'@'localhost' IDENTIFIED BY '1234';
-GRANT ALL PRIVILEGES ON Vinha TO 'administrador'@'localhost' WITH GRANT OPTION;
+DROP DATABASE Vinha; 
+
+CREATE USER 'administrador'@'127.0.0.1' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON Vinha TO 'administrador'@'127.0.0.1' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 
-CREATE USER 'eng_informatico'@'localhost' IDENTIFIED BY '0000';
-GRANT SELECT, INSERT, UPDATE, DELETE, ALTER ON Vinha TO 'eng_informatico'@'localhost';
-GRANT CREATE, DROP, ALTER, INDEX ON Vinha TO 'eng_informatico'@'localhost';
+CREATE USER 'eng_informatico'@'127.0.0.1' IDENTIFIED BY '0001';
+GRANT SELECT, INSERT, UPDATE, DELETE, ALTER ON Vinha TO 'eng_informatico'@'127.0.0.1';
+GRANT CREATE, DROP, ALTER, INDEX ON Vinha TO 'eng_informatico'@'127.0.0.1';
 FLUSH PRIVILEGES;
 
 SELECT User, Host FROM mysql.user;
@@ -23,8 +25,6 @@ CREATE TABLE IF NOT EXISTS Uva (
   acidez VARCHAR(75) NOT NULL,
   peso DECIMAL(8,2) NOT NULL,
   PRIMARY KEY (id));
-
-DROP TABLE Uva; 
   
  CREATE TABLE IF NOT EXISTS Vinho (
   acidez VARCHAR(75) NOT NULL,
@@ -44,8 +44,6 @@ DROP TABLE Uva;
   FOREIGN KEY (uva_id)
 	REFERENCES Uva (id));
 
-DROP TABLE Quinta;
-DROP TABLE Zona;
 
 CREATE TABLE IF NOT EXISTS Zona (
   codigoGeo INT UNSIGNED NOT NULL,
@@ -88,5 +86,5 @@ CREATE TABLE IF NOT EXISTS eMail (
   responsavel VARCHAR(200) NOT NULL,
   PRIMARY KEY (eMail),
     FOREIGN KEY (responsavel)
-    REFERENCES Responsavel (nome))
+    REFERENCES Responsavel (nome));
 
