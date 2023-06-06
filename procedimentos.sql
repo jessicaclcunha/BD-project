@@ -38,8 +38,8 @@ BEGIN
 END
 $$
 
-DROP PROCEDURE obterVinhoPorRegiao;
-CALL obterVinhoPorRegiao (1234567);
+DROP PROCEDURE obterVinhosPorRegiao;
+CALL obterVinhosPorRegiao(1234567);
 
 delimiter $$
 CREATE PROCEDURE ZonasComMaisQuintas()
